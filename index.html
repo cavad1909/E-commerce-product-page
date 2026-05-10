@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sneakers — Fall Limited Edition</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <nav>
+    <button class="nav-burger" title="Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <span class="nav-logo">sneakers</span>
+    <ul class="nav-links">
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-cart" title="Cart">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+      </button>
+      <div class="nav-avatar">A</div>
+    </div>
+  </nav>
+
+  <div class="product">
+    <div class="product-images">
+      <div class="main-image" id="mainImgWrap" onclick="handleMainClick(event)">
+        <button class="mob-arrow mob-prev" onclick="event.stopPropagation(); mobNav(-1)">&#8249;</button>
+        <img id="mainImg" src="" alt="Sneaker main view"/>
+        <button class="mob-arrow mob-next" onclick="event.stopPropagation(); mobNav(1)">&#8250;</button>
+      </div>
+      <div class="thumbnails" id="thumbsContainer"></div>
+    </div>
+
+    <!-- RIGHT: info -->
+    <div class="product-info">
+      <p class="brand-label">Sneaker Company</p>
+      <h1 class="product-name">Fall Limited Edition<br>Sneakers</h1>
+      <p class="product-desc">
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+      </p>
+      <div class="price-block">
+        <div class="price-row">
+          <span class="price-current">$125.00</span>
+          <span class="badge">50%</span>
+        </div>
+        <p class="price-original">$250.00</p>
+      </div>
+      <div class="actions">
+        <div class="qty">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <span class="qty-val" id="qtyVal">0</span>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+        <button class="btn-cart" onclick="addToCart()">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="overlayClick(event)">
+  <div class="lightbox" id="lightboxBox">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <div class="lb-image-wrap">
+      <button class="lb-arrow lb-prev" onclick="lbNav(-1)">&#8249;</button>
+      <img id="lbMainImg" src="" alt=""/>
+      <button class="lb-arrow lb-next" onclick="lbNav(1)">&#8250;</button>
+    </div>
+    <div class="lb-thumbs" id="lbThumbsContainer"></div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
