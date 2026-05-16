@@ -6,7 +6,7 @@
       background: #fff;
     }
 
-    /* ─── WRAPPER (full page) ─── */
+    
     .page {
       min-height: 100vh;
       display: flex;
@@ -14,7 +14,6 @@
       background: #fff;
     }
 
-    /* ─── NAV ─── */
     nav {
       display: flex;
       align-items: center;
@@ -81,7 +80,6 @@
       font-weight: 700;
     }
 
-    /* ─── PRODUCT ─── */
     .product {
       flex: 1;
       display: flex;
@@ -90,7 +88,6 @@
       padding: 60px 80px 60px 60px;
     }
 
-    /* LEFT */
     .product-images {
       flex: 0 0 auto;
       width: 44%;
@@ -142,7 +139,6 @@
     .thumb:hover { transform: translateY(-3px); }
     .thumb.active { border-color: #F97316; }
 
-    /* RIGHT */
     .product-info {
       flex: 1;
       display: flex;
@@ -175,7 +171,6 @@
       margin-bottom: 28px;
     }
 
-    /* ─── PRICE ─── */
     .price-block {
       display: flex;
       flex-direction: column;
@@ -270,7 +265,6 @@
     .btn-cart:hover { background: #e8640a; transform: translateY(-1px); }
     .btn-cart:active { transform: translateY(0); }
 
-    /* ─── LIGHTBOX ─── */
     .lightbox-overlay {
       display: none;
       position: fixed;
@@ -384,7 +378,6 @@
     .lb-thumb:hover { transform: translateY(-2px); }
     .lb-thumb.active { border-color: #F97316; }
 
-    /* ─── MOBILE ─── */
     .nav-burger {
       display: none;
       background: none;
@@ -395,7 +388,6 @@
       flex-shrink: 0;
     }
 
-    /* Carousel arrows on main image (mobile) */
     .mob-arrow {
       display: none;
       position: absolute;
@@ -420,7 +412,6 @@
     .mob-next { right: 14px; }
 
     @media (max-width: 700px) {
-      /* Nav */
       nav {
         padding: 16px 20px;
         gap: 0;
@@ -432,7 +423,6 @@
       .nav-right   { margin-left: 0; gap: 12px; }
       .nav-avatar  { width: 30px; height: 30px; font-size: 12px; }
 
-      /* Product layout: stack vertically */
       .product {
         flex-direction: column;
         gap: 0;
@@ -440,7 +430,6 @@
         align-items: stretch;
       }
 
-      /* Images: full width, no border-radius on top */
       .product-images {
         width: 100%;
         max-width: 100%;
@@ -451,13 +440,10 @@
         border-radius: 0;
       }
 
-      /* Show carousel arrows on mobile */
       .mob-arrow { display: flex; }
 
-      /* Hide thumbnails on mobile */
       .thumbnails { display: none; }
 
-      /* Info section */
       .product-info {
         padding: 24px 20px 36px;
         max-width: 100%;
@@ -467,7 +453,6 @@
       .product-name { font-size: 28px; margin-bottom: 14px; }
       .product-desc { font-size: 13px; margin-bottom: 20px; }
 
-      /* Price row: current + badge + original all in one line */
       .price-block {
         flex-direction: row;
         align-items: center;
@@ -490,7 +475,6 @@
         color: #ccc;
       }
 
-      /* Qty full row */
       .actions {
         flex-direction: column;
         gap: 12px;
